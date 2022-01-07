@@ -1,1 +1,1 @@
-# soliditystudy
+# Solidity Study
