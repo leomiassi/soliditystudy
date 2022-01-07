@@ -6,8 +6,8 @@ contract Property{
     int public price;
     string public location;
 
-    /* When a variable is set as public
-    the solidity will automatic create a "get function"
+    /* When a variable created is set public
+    the solidity will automatically create a "get function"
     for the variable.
     */
 
