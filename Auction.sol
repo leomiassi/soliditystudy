@@ -69,6 +69,7 @@ contract Auction{
         _;
     }
 
+    // Aux function to return the smallest number.
     function min(uint a, uint b) pure internal returns(uint){
         if(a <= b){
             return b;
@@ -77,12 +78,15 @@ contract Auction{
         }
     }
 
+    // Function that cancel the Auction. Only the owner can do it.
     function cancelAuction() public onlyOwner{
         auctionState = State.Canceled;
     }
 
     function placeBid() public payable notOwner afterStart beforeEnd{
+        // The Auction need to be running.
         require(auctionState == State.Running);
+        // The minimum bid = 100 wei.
         require(msg.value >= 100);
 
         uint currentBid = bids[msg.sender] + msg.value;
@@ -107,7 +111,9 @@ contract Auction{
     */
 
     function finalizeAuction() public{
+        //The Acution need to be canceled or ended.
         require(auctionState == State.Canceled || block.number > endBlock);
+        //Only the owner or someone who made a bid can finalize the action.
         require(msg.sender == owner || bids[msg.sender] > 0);
 
         address payable recipient;
@@ -131,6 +137,10 @@ contract Auction{
             }
         }
 
+        //Resetting the bids of the recipient to zero.
+        //By this, the user can call this function only on time.
+        bids[recipient] = 0
+        //Sends value to the recipient.
         recipient.transfer(value);
     }
 }
