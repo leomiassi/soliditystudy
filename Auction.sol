@@ -138,7 +138,7 @@ contract Auction{
         }
 
         //Resetting the bids of the recipient to zero.
-        //By this, the user can call this function only on time.
+        //By this, the user can call this function only one time.
         bids[recipient] = 0
         //Sends value to the recipient.
         recipient.transfer(value);
