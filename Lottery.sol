@@ -50,8 +50,8 @@ contract Loterry{
     }
 
     function random() public view returns(uint){
-        // This is not the most secure way to generate random numbers, but is jut to ilustrate.
-        // The random numbere here is based on the block difficulty, block timestamp and the numbers of players.
+        // This is not the most secure way to generate random numbers, but is just to ilustrate.
+        // The random number created bellow is based on the block difficulty, block timestamp and the numbers of players.
         return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, players.length)));
     }
 
