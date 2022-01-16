@@ -43,7 +43,7 @@ interface ERC20Interface{
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);
 }
 
-contract Cryptos is ERC20Interface{
+contract Lenha is ERC20Interface{
     string public name= "Lenha";
     string public symbol = "LNH";
     uint public decimals = 0; //18
