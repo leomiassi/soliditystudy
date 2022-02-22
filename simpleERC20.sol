@@ -5,9 +5,9 @@ pragma solidity >=0.5.0 <0.9.0;
 /* ERC20 Token Standard. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - A token is designed to represent something of value but also things like voting
-rights or discount vouchers. It can represent any fungible tranding good.
+rights or discount vouchers. It can represent any fungible trading good.
 - ERC stands for 'Ethereum Request for Comments'. An ERC is a form of proposal
-and it's purpose is to define standars and practices.
+and its purpose is to define standards and practices.
 - EIP stands for 'Ethereum Improvement Proposal' and makes changes to the actual
 code of Ethereum. ERC is just guidance on how to use different features of Ethereum.
 - ERC20 is a proposal that intends to standardize how a token contract should be
@@ -15,19 +15,18 @@ defined, how we interact with such a token contract and how these contracts
 interact with each other.
 - ERC20 is a standard interface used by applications such as wallets, decentralized
 exchanges, and so on to interact with tokens.
-
-- The ERC20 introduces a standard for Fungible Token, in ohter words, they have  a
+- The ERC20 introduces a standard for Fungible Token, in other words, they have  a
 property that makes each Token be exactly the same (in type and value) of another
 Token. For example, an ERC20 Token acts just like the ETH, meaning that 1 token 
 is and will always be equal to all the other Tokens.
-
-- A token holder has full control and complete ownership of ther tokens. The token's
+- A token holder has full control and complete ownership of their tokens. The token's
 contract keeps track of token ownership in the same way the Ethereum network keeps 
 track of who owns ETH.
 - We use the same wallet in which we store ETH to buy, sell or transfer a token, but
 we are actually interacting with a contract.
 - There are tokens that are fully ERC20-compliant and tokens that are only partially.
--A full compatible ERC20 Token must implement 6 functions and 2 events.
+- A fully compatible ERC20 Token must implement 6 functions and 2 events.
+
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 interface ERC20Interface{
